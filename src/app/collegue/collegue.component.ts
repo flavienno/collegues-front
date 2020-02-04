@@ -9,15 +9,31 @@ import { Collegue } from '../models/Collegue';
 export class CollegueComponent implements OnInit {
   @Input() col: Collegue;
 
+  modeEdition = false;
+
+  emailSaisie: string;
+  photoSaisie: string;
+
   constructor() { }
 
   modifierCollegue(){
 
+    this.modeEdition = true;
     console.log('Modification du collègue');
   }
 
   creerCollegue() {
     console.log('Création d’un nouveau collègue');
+  }
+  emailChange(valeurSaisie: string) {
+    this.emailSaisie = valeurSaisie;
+  }
+  photoChange(adresseSaisie: string){
+    this.photoSaisie = adresseSaisie;
+  }
+
+  validerLEdition(){
+    console.log('Validation du collègue');
   }
 
   ngOnInit() {
