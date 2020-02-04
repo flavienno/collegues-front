@@ -1,4 +1,4 @@
-
+// classe à simplifier
 export class Collegue {
 
     matricule: string;
