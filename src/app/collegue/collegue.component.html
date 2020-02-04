@@ -1,1 +1,24 @@
-{{col.nom}}
+<div class="row">
+
+    <div class="col-12 col-md-3">
+      <img [src]="col.photoUrl">
+    </div>
+
+    <div class="col-12 col-md-9">
+
+      <ul>
+        <li>Matricule : {{col.matricule}}</li>
+        <li>Nom : {{col.nom}}</li>
+        <li>Prenoms : {{col.prenoms}}</li>
+      </ul>
+
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col offset-md-3">
+      <button class="btn btn-link" (click)="creerCollegue()">Créer un nouveau collègue</button>
+      <button class="btn btn-primary" (click)="modifierCollegue()">Modifier</button>
+    </div>
+  </div>
