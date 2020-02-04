@@ -13,11 +13,11 @@ export class CollegueComponent implements OnInit {
 
   modifierCollegue(){
 
-    console.log('Modif');
+    console.log('Modification du collègue');
   }
 
   creerCollegue() {
-    console.log('Creation')
+    console.log('Création d’un nouveau collègue');
   }
 
   ngOnInit() {
