@@ -11,6 +11,15 @@ export class CollegueComponent implements OnInit {
 
   constructor() { }
 
+  modifierCollegue(){
+
+    console.log('Modif');
+  }
+
+  creerCollegue() {
+    console.log('Creation')
+  }
+
   ngOnInit() {
   }
 
