@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col">
+    <ng-container *ngIf="!modeRechercher; else elseTemplate">
+      Recherche par nom : <input type="text" [value]=""><button class="btn btn-link"
+        (click)="rechercherParNom()">Rechercher</button>
+    </ng-container>
+    <ng-template #elseTemplate>
+      Recherche par nom : <input type="text" [value]=""><button class="btn btn-link"
+        (click)="rechercherParNom()">Rechercher</button>
+      <ul>
+        <li *ngFor="let matricule of matriculeMock">{{ matricule }}</li>
+    </ul>
+    </ng-template>
+  </div>
+</div>

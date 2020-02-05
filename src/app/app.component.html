@@ -1,1 +1,10 @@
-<app-collegue [col]="collegueFictif"></app-collegue>
+<h1>Administration Collegue</h1>
+
+<div class="row">
+  <div class="col-md-6">
+    <app-recherche-collegue-par-nom [matriculeMock]="matriculeFictif"></app-recherche-collegue-par-nom>
+  </div>
+    <div class="col-md-6">
+      <app-collegue [col]="collegueFictif"></app-collegue>
+  </div>
+</div>

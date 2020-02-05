@@ -16,7 +16,7 @@ export class CollegueComponent implements OnInit {
 
   constructor() { }
 
-  modifierCollegue(){
+  modifierCollegue() {
 
     this.modeEdition = true;
     console.log('Modification du collègue');
@@ -32,7 +32,7 @@ export class CollegueComponent implements OnInit {
     this.photoSaisie = adresseSaisie;
   }
 
-  validerLEdition(){
+  validerLEdition() {
     console.log('Validation du collègue');
   }
 
