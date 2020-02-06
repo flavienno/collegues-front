@@ -21,16 +21,9 @@
 </div>
 
 <div class="row">
-  <div *ngIf="!modeEdition; else validerEdition" class="col offset-md-3">
-    <button class="btn btn-link" (click)="creerCollegue()">Créer un nouveau collègue</button>
-    <button class="btn btn-primary" (click)="modifierCollegue()">Modifier</button>
-  </div>
-  <div class="row">
-    <div class="col offset-3">
-      <ng-template #validerEdition>
-        <button class="btn btn-primary" (click)="validerLEdition()">Valider</button>
-      </ng-template>
-
-    </div>
+  <div class="col offset-md-3">
+    <button class="btn btn-link" [hidden]="modeEdition" (click)="creerCollegue()">Créer un nouveau collègue</button>
+    <button class="btn btn-primary" [hidden]="modeEdition" (click)="modifierCollegue()">Modifier</button>
+    <button class="btn btn-primary" [hidden]="!modeEdition" (click)="validerLEdition()">Valider</button>
   </div>
 </div>

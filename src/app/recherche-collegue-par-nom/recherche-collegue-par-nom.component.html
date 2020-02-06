@@ -1,15 +1,24 @@
 <div class="row">
+
   <div class="col">
-    <ng-container *ngIf="!modeRechercher; else elseTemplate">
-      Recherche par nom : <input type="text" [value]=""><button class="btn btn-link"
-        (click)="rechercherParNom()">Rechercher</button>
-    </ng-container>
-    <ng-template #elseTemplate>
-      Recherche par nom : <input type="text" [value]=""><button class="btn btn-link"
-        (click)="rechercherParNom()">Rechercher</button>
-      <ul>
-        <li *ngFor="let matricule of matriculeMock">{{ matricule }}</li>
-    </ul>
-    </ng-template>
+    Recherche par nom :
+  </div>
+
+  <div class="col">
+    <input type="text" class="form-control" #saisieNom>
+  </div>
+
+  <div class="col">
+    <button class="btn btn-primary" (click)="rechercherParNom(saisieNom.value)">Rechercher</button>
+  </div>
+
+</div>
+
+<div class="row">
+
+  <div class="col">
+  <ul>
+    <li *ngFor="let matricule of listeMatricules | async">{{ matricule }}</li>
+  </ul>
   </div>
 </div>
