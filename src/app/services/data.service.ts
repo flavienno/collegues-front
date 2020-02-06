@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Collegue } from '../models/Collegue';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 
-const url = 'https://btoulemonde-collegues-api.herokuapp.com/collegues';
+const url = environment.backendUrl;
 
 @Injectable({
   providedIn: 'root'
@@ -18,5 +19,9 @@ export class DataService {
 
     return this.httpClient.get<string[]>(url + '?nom=' + nom);
 
+  }
+
+  ajouterCollegue(newCollegue: Collegue): Observable<Collegue> {
+    return this.httpClient.post<Collegue>(url, newCollegue);
   }
 }

@@ -1,0 +1,44 @@
+<div class="row">
+
+  <div class="col">
+    <div class="card ">
+      <div class="card-body">
+        <div class="col-3">
+          <img class="img-fluid" src='https://www.w3schools.com/bootstrap/img_avatar2.png'>
+        </div>
+        <div class="col">
+          <div class="form-group">
+
+            <label for="nom">
+              Nom
+            </label>
+            <input type="text" id="nom" class="form-control"[(ngModel)]="creaCollegue.nom">
+
+            <label for="prenom">
+              Prénom
+            </label>
+            <input type="text" id="prenom" class="form-control"[(ngModel)]="creaCollegue.prenoms">
+
+            <label for="date_de_naissance">
+              Date de naissance
+            </label>
+            <input type="date" id="date_de_naissance" class="form-control"[(ngModel)]="creaCollegue.dateDeNaissance">
+
+            <label for="email">
+              Email
+            </label>
+            <input type="email" id="email" class="form-control"[(ngModel)]="creaCollegue.email">
+
+            <label for="photo_URL">
+              Photo URL
+            </label>
+            <input type="url" id="photo_URL" class="form-control"[(ngModel)]="creaCollegue.photoUrl">
+
+            <button class="btn btn-primary" (click)="creerCollegue()">Créer</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

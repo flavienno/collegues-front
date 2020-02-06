@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-// import { matriculeMock } from '../mock/matricules.mock';
 import { Observable } from 'rxjs';
 import { DataService } from '../services/data.service';
 
@@ -14,7 +13,6 @@ import { DataService } from '../services/data.service';
 
 export class RechercheCollegueParNomComponent implements OnInit {
 
-  // @Input() matriculeMock: string[];
 
   listeMatricules: Observable<string[]>;
 
