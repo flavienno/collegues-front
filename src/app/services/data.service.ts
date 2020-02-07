@@ -21,7 +21,7 @@ export class DataService {
 
   }
 
-  ajouterCollegue(newCollegue: Collegue): Observable<Collegue> {
-    return this.httpClient.post<Collegue>(url, newCollegue);
+  ajouterCollegue(newCollegue: Collegue): Observable<void> {
+    return this.httpClient.post<void>(url, newCollegue);
   }
 }
