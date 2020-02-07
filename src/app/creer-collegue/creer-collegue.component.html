@@ -12,29 +12,51 @@
             <label for="nom">
               Nom
             </label>
-            <input type="text" id="nom" class="form-control"[(ngModel)]="creaCollegue.nom">
+            <input type="text" id="nom" class="form-control" [(ngModel)]="creaCollegue.nom" #nomOK="ngModel" required>
+            <p *ngIf="nomOK.dirty && nomOK.invalid">
+              Le nom est obligatoire.
+            </p>
 
             <label for="prenom">
               Prénom
             </label>
-            <input type="text" id="prenom" class="form-control"[(ngModel)]="creaCollegue.prenoms">
+            <input type="text" id="prenom" class="form-control" [(ngModel)]="creaCollegue.prenoms" #prenomOK="ngModel"
+              required>
+            <p *ngIf="prenomOK.dirty && prenomOK.invalid">
+              Le prénom est obligatoire.
+            </p>
 
             <label for="date_de_naissance">
               Date de naissance
             </label>
-            <input type="date" id="date_de_naissance" class="form-control"[(ngModel)]="creaCollegue.dateDeNaissance">
+            <input type="date" id="date_de_naissance" class="form-control" [(ngModel)]="creaCollegue.dateDeNaissance"
+              #date_de_naissanceOK="ngModel" required>
+            <p *ngIf="date_de_naissanceOK.dirty && date_de_naissanceOK.invalid">
+              La date de naissance est obligatoire.
+            </p>
 
             <label for="email">
               Email
             </label>
-            <input type="email" id="email" class="form-control"[(ngModel)]="creaCollegue.email">
+            <input type="email" id="email" class="form-control" [(ngModel)]="creaCollegue.email" #emailOK="ngModel"
+              required>
+            <p *ngIf="emailOK.dirty && emailOK.invalid">
+              Le mail est obligatoire.
+            </p>
 
             <label for="photo_URL">
               Photo URL
             </label>
-            <input type="url" id="photo_URL" class="form-control"[(ngModel)]="creaCollegue.photoUrl">
+            <input type="url" id="photo_URL" class="form-control" [(ngModel)]="creaCollegue.photoUrl"
+              #photo_URL_OK="ngModel" required minlength="7">
+            <p *ngIf="photo_URL_OK.dirty && photo_URL_OK.invalid">
+              L'URL de la photo doit contenir 7 caractères.
+            </p>
 
             <button class="btn btn-primary" (click)="creerCollegue()">Créer</button>
+            <!-- <p *ngIf="monForm.dirty && monForm.invalid">
+              Au moins un champ du formulaire est invalide.
+            </p> -->
 
           </div>
         </div>
