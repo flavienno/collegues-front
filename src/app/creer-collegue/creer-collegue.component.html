@@ -1,4 +1,4 @@
-
+<form #etatForm="ngForm">
 
   <div class="row">
 
@@ -9,12 +9,13 @@
             <img class="img-fluid" [src]="creaCollegue.photoUrl">
           </div>
           <div class="col">
-            <div class="form-group">
-              <form #etatForm="ngForm">
+
+
               <label for="nom">
                 Nom
               </label>
-              <input type="text" id="nom" name="nom" class="form-control" [(ngModel)]="creaCollegue.nom" #nomOK="ngModel" required>
+              <input type="text" id="nom" name="nom" class="form-control" [(ngModel)]="creaCollegue.nom"
+                #nomOK="ngModel" required>
               <p *ngIf="nomOK.dirty && nomOK.invalid">
                 Le nom est obligatoire.
               </p>
@@ -22,8 +23,8 @@
               <label for="prenom">
                 Prénom
               </label>
-              <input type="text" id="prenom" name="prenom" class="form-control" [(ngModel)]="creaCollegue.prenoms" #prenomOK="ngModel"
-                required>
+              <input type="text" id="prenom" name="prenom" class="form-control" [(ngModel)]="creaCollegue.prenoms"
+                #prenomOK="ngModel" required>
               <p *ngIf="prenomOK.dirty && prenomOK.invalid">
                 Le prénom est obligatoire.
               </p>
@@ -31,8 +32,8 @@
               <label for="date_de_naissance">
                 Date de naissance
               </label>
-              <input type="date" id="date_de_naissance" name="dateDeNaissance" class="form-control" [(ngModel)]="creaCollegue.dateDeNaissance"
-                #date_de_naissanceOK="ngModel" required>
+              <input type="date" id="date_de_naissance" name="dateDeNaissance" class="form-control"
+                [(ngModel)]="creaCollegue.dateDeNaissance" #date_de_naissanceOK="ngModel" required>
               <p *ngIf="date_de_naissanceOK.dirty && date_de_naissanceOK.invalid">
                 La date de naissance est obligatoire.
               </p>
@@ -40,8 +41,8 @@
               <label for="email">
                 Email
               </label>
-              <input type="email" id="email" class="form-control" name="email" [(ngModel)]="creaCollegue.email" #emailOK="ngModel"
-                required>
+              <input type="email" id="email" class="form-control" name="email" [(ngModel)]="creaCollegue.email"
+                #emailOK="ngModel" required>
               <p *ngIf="emailOK.dirty && emailOK.invalid">
                 Le mail est obligatoire.
               </p>
@@ -63,14 +64,15 @@
                 {{messageOk}}
               </div>
 
-              <button class="btn btn-primary"  [disabled]="etatForm.invalid" (click)="creerCollegue(etatForm)">Créer</button>
+              <button class="btn btn-primary" [disabled]="etatForm.invalid"
+                (click)="creerCollegue(etatForm)">Créer</button>
 
-            </form>
-            </div>
+
+
           </div>
         </div>
       </div>
     </div>
   </div>
 
-
+</form>
