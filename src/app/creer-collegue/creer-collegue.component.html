@@ -1,4 +1,4 @@
-<form #etatForm="ngForm">
+
 
   <div class="row">
 
@@ -10,7 +10,7 @@
           </div>
           <div class="col">
             <div class="form-group">
-
+              <form #etatForm="ngForm">
               <label for="nom">
                 Nom
               </label>
@@ -65,7 +65,7 @@
 
               <button class="btn btn-primary"  [disabled]="etatForm.invalid" (click)="creerCollegue(etatForm)">Créer</button>
 
-
+            </form>
             </div>
           </div>
         </div>
@@ -73,4 +73,4 @@
     </div>
   </div>
 
-</form>
+
