@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Collegue } from '../models/Collegue';
 import { DataService } from '../services/data.service';
-import {FormControl } from '@angular/forms';
+import {FormControl, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-creer-collegue',
@@ -20,7 +20,7 @@ export class CreerCollegueComponent implements OnInit {
     this.creaCollegue.photoUrl = 'https://www.w3schools.com/bootstrap/img_avatar2.png';
   }
 
-  creerCollegue(etatForm: FormControl) {
+  creerCollegue(etatForm: NgForm) {
     this.messageErreur = null;
     this.messageOk = null;
 
